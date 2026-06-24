@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="module">
+  import { AnalyticsSDK, GoogleAnalyticsProvider } from '/packages/analytics-sdk-core/dist/index.esm.js';
+    
+    const sdk = AnalyticsSDK.getInstance();
+    
+    // Track event before init (should queue)
+    sdk.track('page_load', { url: window.location.href });
+    
+    // Initialize with mock config
+    await sdk.init('https://example.com/config');
+    
+    // Register Google Analytics provider
+    sdk.registerProvider(new GoogleAnalyticsProvider());
+    
+    // Track after init (should route to provider)
+    sdk.track('button_click', { button: 'test' });
+  </script>
+</head>
+<body>
+  <h1>Analytics SDK Test</h1>
+</body>
+</html>

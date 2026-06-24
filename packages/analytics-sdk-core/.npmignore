@@ -1,0 +1,20 @@
+# Source files
+src/
+tests/
+
+# Config files
+tsconfig.json
+tsconfig.tsbuildinfo
+rollup.config.js
+jest.config.cjs
+
+# Build artifacts
+.rollup.cache/
+*.log
+
+# Development
+node_modules/
+.DS_Store
+*.swp
+*.swo
+*~

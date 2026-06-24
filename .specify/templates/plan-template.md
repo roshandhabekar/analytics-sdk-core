@@ -40,7 +40,22 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+**Analytics SDK Constitution Compliance Checklist:**
+
+- [ ] **Config Over Code**: Does this feature require remote configuration? Is any behavior hardcoded?
+- [ ] **Plugin Architecture**: If adding a provider, does it implement the AnalyticsProvider interface?
+- [ ] **Singleton Pattern**: Does the feature maintain singleton behavior across Module Federation boundaries?
+- [ ] **Runtime Safety**: Are all external calls wrapped in try-catch? Can this feature crash the host app?
+- [ ] **Performance Impact**: Will this add >50ms to initialization or degrade user interactions?
+- [ ] **Idempotent Operations**: Can initialization/tracking be safely called multiple times?
+- [ ] **Event Queueing**: How does this handle events before SDK initialization?
+- [ ] **Security**: Are script URLs validated? Is data sanitized? Any PII risks?
+- [ ] **Testing Strategy**: Are integration tests planned for Module Federation scenarios?
+- [ ] **Error Handling**: Are errors logged but never thrown to application code?
+- [ ] **Extensibility**: Does this maintain provider-agnostic core? No circular dependencies?
+- [ ] **Observability**: Are appropriate logging/monitoring hooks included?
+
+**Constitution Version**: 1.0.0 (refer to `.specify/memory/constitution.md` for full principles)
 
 ## Project Structure
 
