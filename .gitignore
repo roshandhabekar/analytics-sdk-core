@@ -70,3 +70,5 @@ docs/build/
 # Debug
 debug.log
 trace.log
+pubkey
+pubkey.pub
