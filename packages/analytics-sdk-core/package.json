@@ -1,13 +1,15 @@
 {
   "name": "analytics-sdk-core",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "type": "module",
-  "description": "Core TypeScript SDK for centralized analytics CDN integration (framework-agnostic)",
+  "description": "Framework-agnostic TypeScript SDK for centralized analytics integration with Module Federation support",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "build": "rollup -c",
@@ -22,13 +24,23 @@
     "analytics",
     "sdk",
     "google-analytics",
+    "ga4",
     "clevertap",
     "module-federation",
     "microfrontend",
+    "micro-frontend",
     "cdn",
-    "tracking"
+    "tracking",
+    "event-tracking",
+    "user-analytics",
+    "web-analytics",
+    "typescript",
+    "framework-agnostic",
+    "browser",
+    "testing",
+    "window-injection"
   ],
-  "author": "",
+  "author": "Analytics SDK Contributors",
   "license": "MIT",
   "repository": {
     "type": "git",
