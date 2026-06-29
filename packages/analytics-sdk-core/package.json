@@ -1,6 +1,6 @@
 {
   "name": "analytics-sdk-core",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "description": "Framework-agnostic TypeScript SDK for centralized analytics integration with Module Federation support",
   "main": "dist/index.js",
